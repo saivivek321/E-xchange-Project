@@ -15,7 +15,9 @@ var categorys=[
 
 
 app.get("/", (req, res) => {
-    res.render("seller",{Categories:categorys});
+    // res.render("buyer",{Categories:categorys});
+   // res.render("seller");
+   res.render("profile");
 })
 app.listen(3000,function(){
     console.log("Server Started and listening on 3000");
