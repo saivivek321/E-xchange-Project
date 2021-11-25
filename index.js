@@ -15,7 +15,7 @@ var categorys=[
 
 
 app.get("/", (req, res) => {
-    // res.render("buyer",{Categories:categorys});
+   // res.render("buyer",{Categories:categorys});
    // res.render("seller");
    res.render("profile");
 })
