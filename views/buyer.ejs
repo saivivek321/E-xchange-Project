@@ -6,6 +6,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Luckiest+Guy&family=Mate+SC&display=swap" rel="stylesheet">
+
     <!-- <script type="text/javascript" src="index.js"></script> -->
 </head>
 <body>
@@ -18,7 +23,7 @@
          <input type="checkbox" id="chkToggle"></input>
              <ul class="main-nav" id="js-menu">
                <li>
-                 <a style="color: #fff" href="#" class="nav-links buyer-icon">Buyer</a>
+                 <a style="color: #fff" href="#" class="nav-links ">Buyer</a>
                </li>
                <li>
                  <a href="seller.ejs" class="nav-links">Seller</a>
@@ -32,6 +37,29 @@
              </ul>
  </nav>
 
-     
+
+ <h1 class="cat-heading">Select Category</h1>
+ <div class="wrapper">
+  <div class="cards_wrap">
+
+    <% Categories.forEach(function(item){ %>
+      <div class="card_item">
+        <div class="card_inner">
+          <div class="card_top">
+            <img class="buyer-imgs" src="<%= item.img_add %>" alt="1" />
+          </div>
+          <div class="card_bottom">
+            <div class="card_category">
+              <a href=""><%= item.title %></a>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      
+   <% }) %>
+
+  </div>
+</div>
 </body>
 </html>

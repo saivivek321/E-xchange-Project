@@ -9,6 +9,25 @@
     background-image: linear-gradient(to right, #bf6ecf78 , #2476ae6e);
   }
   
+
+.cat-heading{
+  font-family: 'Gorditas', cursive;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    font-size: 4rem;
+}
+.seller-heading{
+  font-family: 'Gorditas', cursive;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+
+/* Navbar CSS */
+
   .navbar {
     font-size: 18px;
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
@@ -97,4 +116,173 @@
       color: rgba(255, 255, 255, 1);
     }
   }
+
+
+
+/* Cards Layout */
+
+  .buyer-imgs {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
   
+  .wrapper {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 50px;
+  }
+  
+  .cards_wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cards_wrap .card_item {
+    width: 25%;
+    padding: 10px;
+  }
+  
+  .cards_wrap .card_inner {
+    background: #7f5a82;
+    border-radius: 30px;
+  }
+  
+  .cards_wrap .card_top {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    padding-bottom: 0;
+  }
+  
+  .cards_wrap .card_bottom {
+    padding: 15px;
+  }
+  
+  .cards_wrap .card_bottom .card_category {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .cards_wrap .card_bottom .card_category a{
+    text-decoration: none;
+    color: #fff;
+    font-size:1.3rem;
+    font-family: 'Luckiest Guy', cursive;
+  }
+  
+  @media (max-width: 1024px) {
+    .cards_wrap .card_item {
+      width: 33.3%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards_wrap .card_item {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 528px) {
+    .cards_wrap .card_item {
+      width: 100%;
+    }
+  }
+
+
+
+/* Form */
+.contact-us{
+  width: 500px;
+  background: #fff;
+  padding: 50px;
+  margin: 100px auto;
+  border-radius: 30px;
+  position: relative;
+}
+
+.title h1{
+  color: #535274;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form,
+.form-items{
+  width: 100%;
+}
+
+.form-items .input{
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  background: #ebeef1;
+  border: 0px;
+  outline: none;
+  border-radius: 30px;
+}
+
+.form-items .input.message{
+  height: 125px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 15px 15px;
+  resize: none;
+}
+
+.btn{
+  background: #827ffe;
+  text-align: center;
+  color: #fff;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn .fas{
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.form-items{
+  position: relative;
+}
+
+.form-items .fas{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #9a99aa;
+}
+
+/* Profile */
+.py-4{
+  margin-top: 100px;
+}
+.student-profile .card {
+  border-radius: 10px;
+}
+.student-profile .card .card-header .profile_img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+}
+.student-profile .card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.student-profile .card p {
+  font-size: 16px;
+  color: #000;
+}
+.student-profile .table th,
+.student-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+}
