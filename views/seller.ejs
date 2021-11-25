@@ -3,28 +3,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
   <body>
-      <nav class="navbar">
-          <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
-            <i class="fa fa-bars"></i>
-          </label>
-          <a href="#" class="logo">E-xchange</a>
-          <input type="checkbox" id="chkToggle">
-              <ul class="main-nav" id="js-menu">
-                <li>
-                  <a href="/buyer" class="nav-links ">Buyer</a>
-                </li>
-                <li>
-                  <a style="color: #fff"  href='#' class="nav-links">Seller</a>
-                </li>
-                <li>
-                  <a href="#" class="nav-links">Profile</a>
-                </li>
-                <li>
-                  <a href="#" class="nav-links">
-                    <i class="fa fa-shopping-cart" style="font-size:20px"></i> </a>
-                </li>
-              </ul>
-      </nav>
+      
+    <%- include("includes/nvigation.ejs") %>
 
           
   <form action="/" method="post">
