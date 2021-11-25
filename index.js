@@ -13,15 +13,8 @@ var categorys=[
     {"title":"Chart-Holder","img_add":"imgs/4.jpg"}
 ];
 
-
 app.get("/", (req, res) => {
-<<<<<<< HEAD
-   // res.render("buyer",{Categories:categorys});
-   // res.render("seller");
-   res.render("profile");
-=======
     res.render("profile", {path: "/profile"});
->>>>>>> 7cf968ee9af42c714b90112e13a2712adcee6e5c
 })
 
 app.get("/buyer", (req, res, next) =>{
@@ -31,7 +24,9 @@ app.get("/buyer", (req, res, next) =>{
 app.get('/seller', (req, res, next)=>{
     res.render('seller', { path: "/seller"})
 })
-
+app.get('/profile', (req, res, next)=>{
+    res.render('profile', { path: "/profile"})
+})
 app.listen(3000,function(){
     console.log("Server Started and listening on 3000");
 })
