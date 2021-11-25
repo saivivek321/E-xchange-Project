@@ -14,7 +14,8 @@ var categorys=[
 ];
 
 app.get("/", (req, res) => {
-    res.render("profile", {path: "/profile"});
+    //res.render("profile", {path: "/profile"});
+    res.render("Cycle");
 })
 
 app.get("/buyer", (req, res, next) =>{
@@ -27,6 +28,9 @@ app.get('/seller', (req, res, next)=>{
 app.get('/profile', (req, res, next)=>{
     res.render('profile', { path: "/profile"})
 })
+
+
+
 app.listen(3000,function(){
     console.log("Server Started and listening on 3000");
 })
