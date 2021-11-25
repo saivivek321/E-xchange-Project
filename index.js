@@ -15,10 +15,17 @@ var categorys=[
 
 
 app.get("/", (req, res) => {
-    // res.render("buyer",{Categories:categorys});
-   // res.render("seller");
-   res.render("profile");
+    res.render("profile", {path: "/profile"});
 })
+
+app.get("/buyer", (req, res, next) =>{
+    res.render("buyer",{Categories:categorys, path: "/buyer"});
+})
+
+app.get('/seller', (req, res, next)=>{
+    res.render('seller', { path: "/seller"})
+})
+
 app.listen(3000,function(){
     console.log("Server Started and listening on 3000");
 })

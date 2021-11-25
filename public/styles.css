@@ -10,6 +10,10 @@
   }
   
 
+.active{
+  color: #fff;
+}
+
 .cat-heading{
   font-family: 'Gorditas', cursive;
     text-align: center;
@@ -17,6 +21,7 @@
     margin-top: 50px;
     font-size: 4rem;
 }
+
 .seller-heading{
   font-family: 'Gorditas', cursive;
     text-align: center;
