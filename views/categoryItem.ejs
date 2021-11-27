@@ -1,0 +1,28 @@
+<%- include("includes/head.ejs") %>
+
+    </head>
+    <body>
+
+    <%- include("includes/navigation.ejs") %>
+
+    <% categoryItems.forEach(item =>{ %>
+        <div class="img_show">
+            <img src="<%= item.img_add %>" alt="<%= item.category %>" class="item__img">
+        </div>
+        <div class="item__info">
+            <div class="item__display">
+                <li class="item__price"><%= item.price %></li>
+                <ul>
+                    <li class="item__owner"><%= item.owner %></li>
+                    <li class="item__condition"><%=item.condition %></li>
+                    <li class="item__category"><%= item.Category %></li>
+                    <li class="item__description"><%= item.description %></li>
+                </ul>
+            </div>
+            <div>
+                <button class="add_to_cart"></button>
+            </div>
+        </div>
+    <% }) %>
+    </body>
+</html>

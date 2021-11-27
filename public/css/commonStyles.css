@@ -1,13 +1,13 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-  body {
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    background-image: linear-gradient(to right, #bf6ecf78 , #2476ae6e);
-  }
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to right, #bf6ecf78 , #2476ae6e);
+}
   
 
 .active{
@@ -70,6 +70,10 @@
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
     font-size: 24px;
+  }
+
+  a{
+    text-decoration: none;
   }
   
   #chkToggle {
@@ -194,6 +198,10 @@
     }
   }
 
+  .col-lg-4{
+    margin-bottom: 5px;
+  }
+
 
 
 /* Form */
@@ -263,8 +271,8 @@
 }
 
 /* Profile */
-.py-4{
-  margin-top: 100px;
+.student-profile{
+  margin-top: 10px;
 }
 .student-profile .card {
   border-radius: 10px;
