@@ -1,5 +1,4 @@
 const express=require('express');
-// install the below two modules and delete this line of comment
 const bodyParser = require('body-parser')
 const _ = require('lodash')
 
@@ -59,21 +58,25 @@ app.get("/", (req, res) => {
     res.render("profile", {path: "/profile"});
 })
 
-app.get("/buyer", (req, res, next) =>{
-    res.render("buyer",{Categories:categorys, path: "/buyer"});
+app.get("/purchase", (req, res, next) =>{
+    res.render("purchaseItem",{Categories:categorys, path: "/purchase"});
 })
 
-app.get('/seller', (req, res, next)=>{
-    res.render('seller', { path: "/seller"})
+app.get('/sell', (req, res, next)=>{
+    res.render('sellItem', { path: "/sell"})
+})
+
+app.post("/sell", (req, res, next)=>{
+    const {category, owner, price, item_condition, branch_year, description} = req.body
+    console.log(category, owner, price, item_condition, branch_year, description);
+    // console.log(req.body);
+    res.redirect("/purchase")
 })
 
 app.get('/profile', (req, res, next)=>{
     res.render('profile', { path: "/profile"})
 })
 
-// check if i did any spell mistakes or any error while using lodash
-// or passing data to ejs file
-// ejs file is categoryItem.ejs inside views folder
 app.get('/category/:categoryName', (req, res, next)=>{
     const categoryName = _.lowerCase(req.params.categoryName)
     const filteredItems = categoryItems.filter(item => categoryName === _.lowerCase(item.category))
