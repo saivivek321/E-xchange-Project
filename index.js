@@ -8,12 +8,12 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}))
 
 const categorys=[
-    {"title":"Cycle","img_add":"imgs/1.jpg"},
-    {"title":"Books","img_add":"imgs/2.jpg"},
-    {"title":"Calculator","img_add":"imgs/5.jpg"},
-    {"title":"Stationary","img_add":"imgs/6.jpg"},
-    {"title":"Drafter","img_add":"imgs/3.jpg"},
-    {"title":"Chart-Holder","img_add":"imgs/4.jpg"}
+    {"title":"Cycle","img_add":"imgs/1.jpg", "category":"Cycle"},
+    {"title":"Books","img_add":"imgs/2.jpg", "category":"Books"},
+    {"title":"Calculator","img_add":"imgs/5.jpg", "category":"Calculator"},
+    {"title":"Stationary","img_add":"imgs/6.jpg", "category":"Stationary"},
+    {"title":"Drafter","img_add":"imgs/3.jpg", "category":"Drafter"},
+    {"title":"Chart-Holder","img_add":"imgs/4.jpg", "category":"Chart-Holder"}
 ];
 
 const categoryItems = [
@@ -21,6 +21,7 @@ const categoryItems = [
         category: 'cycle', 
         price: 500, 
         condition: 'usable',
+        img_add:"imgs/1.jpg",
         owner: 'Viz',
         description: 'Working well but front break need to be tightned'
     },
@@ -28,12 +29,14 @@ const categoryItems = [
         category: 'books', 
         price: 500,
         condition: 'usable',
+        img_add:"imgs/2.jpg",
         owner: 'Vivek',
         description: 'some pages missing'
     },
     {
         category: 'Drafter', 
-        price: 50, 
+        price: 50,
+        img_add:"imgs/3.jpg",
         condition: 'not so good',
         owner: 'Jaithra',
         description: 'Working well but need to be tightned'
@@ -42,12 +45,14 @@ const categoryItems = [
         category: 'cycle', 
         price: 500, 
         condition: 'usable',
+        img_add:"imgs/1.jpg",
         owner: 'Viz',
         description: 'Working well but front break need to be tightned'
     },
     {
-        category: 'Stationary', 
-        price: 5, 
+        category: 'Stationary',
+        price: 5,
+        img_add:"imgs/6.jpg",
         condition: 'Not so good',
         owner: 'Vamsi',
         description: 'Working well but front break need to be tightned'
@@ -67,10 +72,12 @@ app.get('/sell', (req, res, next)=>{
 })
 
 app.post("/sell", (req, res, next)=>{
-    const {category, owner, price, item_condition, branch_year, description} = req.body
-    console.log(category, owner, price, item_condition, branch_year, description);
+    const {category, owner, price, condition, branch_year, description} = req.body
+    console.log(category, owner, price, condition, branch_year, description);
     // console.log(req.body);
     res.redirect("/purchase")
+    // need to redirect to sold items page at last  -----> final goal
+    // right now the data is added to the var and redirected to purchase page  ---> current working method to continue other work
 })
 
 app.get('/profile', (req, res, next)=>{
@@ -84,6 +91,10 @@ app.get('/category/:categoryName', (req, res, next)=>{
         path: `/category/${categoryName}`, 
         categoryItems: filteredItems
     })
+})
+
+app.get('/cart', (req, res, next) =>{
+    console.log("This is your cart");
 })
 
 app.listen(3000,function(){

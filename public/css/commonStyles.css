@@ -271,8 +271,8 @@ body{
 }
 
 /* Profile */
-.py-4{
-  margin-top: 100px;
+.student-profile{
+  margin-top: 10px;
 }
 .student-profile .card {
   border-radius: 10px;
