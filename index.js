@@ -64,7 +64,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/purchase", (req, res, next) =>{
-    res.render("purchaseItem",{Categories:categorys, path: "/purchase"});
+    res.render("purchase",{Categories:categorys, path: "/purchase"});
 })
 
 app.get('/sell', (req, res, next)=>{
