@@ -2,7 +2,7 @@ const express=require('express');
 const bodyParser = require('body-parser')
 const _ = require('lodash')
 
-const app= express();
+const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}))
@@ -59,12 +59,12 @@ const categoryItems = [
     },
 ]
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
     res.render("profile", {path: "/profile"});
 })
 
 app.get("/purchase", (req, res, next) =>{
-    res.render("purchaseItem",{Categories:categorys, path: "/purchase"});
+    res.render("purchase",{Categories:categorys, path: "/purchase"});
 })
 
 app.get('/sell', (req, res, next)=>{
@@ -73,9 +73,11 @@ app.get('/sell', (req, res, next)=>{
 
 app.post("/sell", (req, res, next)=>{
     const {category, owner, price, condition, branch_year, description} = req.body
-    console.log(category, owner, price, condition, branch_year, description);
+    // console.log(category, owner, price, condition, branch_year, description);
+    categoryItems.push(req.body)
+    console.log(categoryItems);
     // console.log(req.body);
-    res.redirect("/purchase")
+    res.redirect(`/category/${category}`)
     // need to redirect to sold items page at last  -----> final goal
     // right now the data is added to the var and redirected to purchase page  ---> current working method to continue other work
 })
