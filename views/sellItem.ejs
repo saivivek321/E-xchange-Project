@@ -1,0 +1,49 @@
+<%- include("includes/head.ejs") %>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="/css/sellItem.css">
+  </head>
+  <body>
+      
+    <%- include("includes/navigation.ejs") %>
+
+    <form action="/sell" method="post">
+      <div class="contact-us">
+        <div class="title">
+          <h1 class="seller-heading">Sell Items</h1>
+        </div>
+        <div class="form">
+          <div class="form-items">
+            <input type="text" class="input" placeholder="Category" required name="category">
+            <i class="fas fa-angle-double-right"></i>
+          </div>
+          <div class="form-items">
+            <input type="text" class="input" placeholder="Owner Name" required name="owner">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="form-items">
+            <input type="text" class="input" placeholder="Price" required name="price">
+            <i class="fas fa-rupee-sign"></i>
+          </div>
+          <div class="form-items">
+            <input type="text" class="input" placeholder="Item Condition" required name="condition">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <!-- <div class="form-items">
+            <input type="text" class="input" placeholder="Branch and Year" required name="branch_year">
+            <i class="fas fa-graduation-cap"></i>
+          </div> -->
+          <div class="form-items">
+            <input type="file" class="input" name="filename" accept="image/*" required>
+            <i class="fas fa-image"></i>
+          </div>
+      
+          <div class="form-items">
+            <textarea class="input message" cols="30" rows="10" placeholder="DISCRIPTION ABOUT ITEM...." required name="description"></textarea>
+          </div>
+        </div>
+        <button class="btn">Sell<i class="fas fa-arrow-right"></i></button>
+      </div>
+    </form>
+  </body>
+</html>
