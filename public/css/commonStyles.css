@@ -9,9 +9,6 @@ body{
   background-image: linear-gradient(to right, #bf6ecf78 , #2476ae6e);
 }
 
-::-webkit-scrollbar {
-  width: 0;
-}
 
 .active{
   color: #fff;

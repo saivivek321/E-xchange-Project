@@ -1,28 +1,40 @@
+
 <%- include("includes/head.ejs") %>
+<link rel="stylesheet" type="text/css" href="/css/cat_styles.css">
 
   </head>
   <body>
 
   <%- include("includes/navigation.ejs") %>
 
-  <% categoryItems.forEach(item =>{ %>
-    <div class="img_show">
-      <img src="/<%= item.img_add %>" alt="<%= item.category %>" class="item__img">
-    </div>
-    <div class="item__info">
-      <div class="item__display">
-        <li class="item__price"><%= item.price %></li>
-        <ul>
-          <li class="item__owner"><%= item.owner %></li>
-          <li class="item__condition"><%=item.condition %></li>
-          <li class="item__category"><%= item.Category %></li>
-          <li class="item__description"><%= item.description %></li>
-        </ul>
-      </div>
-      <div>
-        <button class="add_to_cart"></button>
-      </div>
-    </div>
-  <% }) %>
+
+
+  <!-- src="/imgs/cycles/1.jpg" -->
+  <div class="grid">
+    <% categoryItems.forEach(item =>{ %>
+
+        <div class="grid-item">
+            <div class="card">
+              <img class="card-img" src="<%= item.img_add%>" alt="Rome" />
+              <div class="card-content">
+                <h1 class="card-header"><%= item.price %> ₹ </h1>
+                <h3 class="carn-details"><%= item.owner %> :</h3>
+                <h3 class="carn-details"><%=item.condition %> :</h3>
+                <p class="card-text">
+                  Discription:
+                  <%= item.description %>
+                </p>
+                <button class="card-btn">Add To Cart <span>&rarr;</span></button>
+              </div>
+            </div>
+          </div>
+
+    <% }) %>
+  </div>
+
+
+  
+
   </body>
+
 </html>
