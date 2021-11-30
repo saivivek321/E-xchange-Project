@@ -8,12 +8,12 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}))
 
 const categorys=[
-    {"title":"Cycle","img_add":"imgs/1.jpg", "category":"Cycle"},
-    {"title":"Books","img_add":"imgs/2.jpg", "category":"Books"},
-    {"title":"Calculator","img_add":"imgs/5.jpg", "category":"Calculator"},
-    {"title":"Stationary","img_add":"imgs/6.jpg", "category":"Stationary"},
-    {"title":"Drafter","img_add":"imgs/3.jpg", "category":"Drafter"},
-    {"title":"Chart-Holder","img_add":"imgs/4.jpg", "category":"Chart-Holder"}
+    {"title":"Cycle","img_add":"imgs/1.jpg", "category":"Cycle","url":"/category/cycle"},
+    {"title":"Books","img_add":"imgs/2.jpg", "category":"Books","url":"/category/books"},
+    {"title":"Calculator","img_add":"imgs/5.jpg", "category":"Calculator","url":"/category/calculator"},
+    {"title":"Stationary","img_add":"imgs/6.jpg", "category":"Stationary","url":"/category/stationary"},
+    {"title":"Drafter","img_add":"imgs/3.jpg", "category":"Drafter","url":"/category/drafter"},
+    {"title":"Chart-Holder","img_add":"imgs/4.jpg", "category":"Chart-Holder","url":"/category/chart_holder"}
 ];
 
 const categoryItems = [
