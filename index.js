@@ -126,6 +126,6 @@ app.get('/cart', (req, res, next) =>{
     console.log("This is your cart");
 })
 
-app.listen(3010,function(){
-    console.log("Server Started and listening on 3010");
+app.listen(3000,function(){
+    console.log("Server Started and listening on 3000");
 })
