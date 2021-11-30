@@ -2,6 +2,8 @@ const express=require('express');
 const bodyParser = require('body-parser')
 const _ = require('lodash')
 
+const data = require('./models/getData')
+
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -79,6 +81,10 @@ app.get("/", (req, res, next) => {
     res.render("profile", {path: "/profile"});
 })
 
+app.get("/about", (req, res, next) =>{
+    res.render('aboutUs/aboutUs', {path: '/about'})
+})
+
 app.get("/purchase", (req, res, next) =>{
     res.render("purchase",{Categories:categorys, path: "/purchase"});
 })
@@ -88,14 +94,10 @@ app.get('/sell', (req, res, next)=>{
 })
 
 app.post("/sell", (req, res, next)=>{
-    const {category, owner, price, condition, branch_year, description} = req.body
-    // console.log(category, owner, price, condition, branch_year, description);
+    const {category, owner, price, condition, description} = req.body
     categoryItems.push(req.body)
-    console.log(categoryItems);
-    // console.log(req.body);
     res.redirect(`/category/${category}`)
-    // need to redirect to sold items page at last  -----> final goal
-    // right now the data is added to the var and redirected to purchase page  ---> current working method to continue other work
+
 })
 
 app.get('/profile', (req, res, next)=>{
@@ -112,9 +114,6 @@ app.get('/profile_orders', (req, res, next)=>{
     res.render('profile/orders', { path: "/profile/orders"})
 })
 
-
-
-
 app.get('/category/:categoryName', (req, res, next)=>{
     const categoryName = _.lowerCase(req.params.categoryName)
     const filteredItems = categoryItems.filter(item => categoryName === _.lowerCase(item.category))
@@ -128,8 +127,6 @@ app.get('/cart', (req, res, next) =>{
     console.log("This is your cart");
 })
 
-
-app.listen(3010,function(){
-    console.log("Server Started and listening on 3010");
-
+app.listen(3000,function(){
+    console.log("Server Started and listening on 3000");
 })
