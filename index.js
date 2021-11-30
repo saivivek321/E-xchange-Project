@@ -103,13 +103,13 @@ app.get('/profile', (req, res, next)=>{
 })
 
 app.get('/profile_profile', (req, res, next)=>{
-    res.render('profile_profile', { path: "/profile_profile"})
+    res.render('profile/profile', { path: "/profile/profile"})
 })
 app.get('/profile_sales', (req, res, next)=>{
-    res.render('profile_sales', { path: "/profile_sales"})
+    res.render('profile/sales', { path: "/profile/sales"})
 })
 app.get('/profile_orders', (req, res, next)=>{
-    res.render('profile_orders', { path: "/profile_orders"})
+    res.render('profile/orders', { path: "/profile/orders"})
 })
 
 
