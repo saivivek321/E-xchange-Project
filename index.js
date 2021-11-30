@@ -101,6 +101,7 @@ app.post("/sell", (req, res, next)=>{
 app.get('/profile', (req, res, next)=>{
     res.render('profile', { path: "/profile"})
 })
+
 app.get('/profile_profile', (req, res, next)=>{
     res.render('profile_profile', { path: "/profile_profile"})
 })
@@ -110,6 +111,7 @@ app.get('/profile_sales', (req, res, next)=>{
 app.get('/profile_orders', (req, res, next)=>{
     res.render('profile_orders', { path: "/profile_orders"})
 })
+
 
 
 
@@ -126,6 +128,8 @@ app.get('/cart', (req, res, next) =>{
     console.log("This is your cart");
 })
 
-app.listen(3010,function(){
-    console.log("Server Started and listening on 3010");
+
+app.listen(3000,function(){
+    console.log("Server Started and listening on 3000");
+
 })

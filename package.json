@@ -1,11 +1,11 @@
 {
-  "name": "nodejs-1",
+  "name": "e-xchange",
   "version": "0.1.0",
   "description": "E-xchange",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-script": "nodemon index.js",
+    "app": "nodemon index.js",
     "start": "node index.js"
   },
   "author": "Sai Vivek",
