@@ -17,62 +17,57 @@ const categorys=[
 ];
 
 const categoryItems = [
-    {
-        category: 'cycle', 
-        price: 500, 
-        condition: 'usable',
-        img_add:"/imgs/cycles/1.jpg",
-        owner: 'Vijay',
-        description: 'Working well but front break need to be tightned'
-    },
-    {
-        category: 'books', 
-        price: 500,
-        condition: 'usable',
-        img_add:"/imgs/2.jpg",
-        owner: 'Vivek',
-        description: 'some pages missing'
-    },
-    {
-        category: 'Drafter', 
-        price: 50,
-        img_add:"/imgs/3.jpg",
-        condition: 'not so good',
-        owner: 'Jaithra',
-        description: 'Working well but need to be tightned'
-    },
-    {
-        category: 'cycle', 
-        price: 600, 
-        condition: 'usable',
-        img_add:"/imgs/cycles/2.jpg",
-        owner: 'Vamsi',
-        description: 'Working well but front break need to be tightned'
-    },
-    {
-        category: 'Stationary',
-        price: 5,
-        img_add:"/imgs/6.jpg",
-        condition: 'Not so good',
-        owner: 'Vamsi',
-        description: 'Working well but front break need to be tightned'
-    },  
-    {
-        category: 'cycle', 
-        price: 400, 
-        condition: 'super',
-        img_add:"/imgs/cycles/3.jpg",
-        owner: 'Jaithra',
-        description: 'Working well but front break need to be tightned'
-    },
-    {
-        category: 'cycle', 
-        price: 400, 
-        condition: 'super',
-        img_add:"/imgs/cycles/3.jpg",
-        owner: 'Jaithra',
-        description: 'Working well but front break need to be tightned'
-    }
+    {category: 'cycle', price: 500, condition: 'usable',img_add:"/imgs/cycles/1.jpg",owner: 'Vijay',
+     description: 'Working well but front break need to be tightned'},
+    {category: 'cycle', price: 600, condition: 'usable',img_add:"/imgs/cycles/4.jpg",owner: 'Vamsi',
+    description: 'Working well but front break need to be tightned'}, 
+    {category: 'cycle', price: 400, condition: 'super',img_add:"/imgs/cycles/5.jpg",owner: 'Jaithra',
+     description: 'Working well but front break need to be tightned'},
+    {category: 'cycle', price: 400, condition: 'super',img_add:"/imgs/cycles/2.jpg",owner: 'Jaithra',
+    description: 'Working well but front break need to be tightned'},
+
+    {category: 'books', price: 1200,condition: 'usable',img_add:"/imgs/books/5.jpg",owner: 'Sai Vivek',
+    description: 'some pages missing'},
+    {category: 'books', price: 650,condition: 'usable',img_add:"/imgs/books/1.jpg",owner: 'Jaithra',
+     description: 'some pages missing'},
+     {category: 'books', price: 300,condition: 'usable',img_add:"/imgs/books/2.jpg",owner: 'Vijay',
+     description: 'some pages missing'},
+     {category: 'books', price: 250,condition: 'usable',img_add:"/imgs/books/3.jpg",owner: 'Vivek',
+     description: 'some pages missing'},
+     {category: 'books', price: 700,condition: 'usable',img_add:"/imgs/books/4.jpg",owner: 'Vamsi',
+     description: 'some pages missing'},
+
+
+    {category: 'Stationary',price: 120,img_add:"/imgs/stationary/1.jpg",condition: 'Not so good',owner: 'Vamsi',
+    description: 'Some leafs are torn'}, 
+    {category: 'Stationary',price: 50,img_add:"/imgs/stationary/2.jpg",condition: 'Good',owner: 'Vijay',
+    description: 'Some brushes are lost in set'}, 
+    {category: 'Stationary',price: 70,img_add:"/imgs/stationary/3.jpg",condition: 'Not so good',owner: 'Jaithra',
+    description: 'Some colors are dried'}, 
+    {category: 'Stationary',price: 200,img_add:"/imgs/stationary/4.jpg",condition: 'Excellent',owner: 'Vivek',
+    description: 'Parker pen'},
+
+    {category: 'Calculator', price: 450,img_add:"/imgs/calculator/1.jpg",condition: 'Good',owner: 'Sai Vivek',
+    description: 'Working well'},
+    {category: 'Calculator', price: 700,img_add:"/imgs/calculator/2.jpg",condition: 'Ok',owner: 'Vamsi',
+    description: 'Working well'},
+    {category: 'Calculator', price: 1000,img_add:"/imgs/calculator/3.jpg",condition: 'Excellent',owner: 'Jaithra',
+    description: 'Working very well'},
+    
+    {category: 'drafter', price: 45,img_add:"/imgs/drafter/1.jpg",condition: 'Good',owner: 'Sai Vivek',
+    description: 'Working well'},
+    {category: 'drafter', price: 70,img_add:"/imgs/drafter/2.jpg",condition: 'Ok',owner: 'Vamsi',
+    description: 'Working well'},
+    {category: 'drafter', price: 100,img_add:"/imgs/drafter/3.jpg",condition: 'Excellent',owner: 'Vijay',
+    description: 'Working very well'},
+
+    {category: 'Chart-Holder', price: 120,img_add:"/imgs/ChartHolder/1.jpg",condition: 'No Damage',owner: 'Vijay',
+    description: 'Works very well'},
+    {category: 'Chart-Holder', price: 120,img_add:"/imgs/ChartHolder/2.jpg",condition: 'Pretty good',owner: 'Jaithra',
+    description: 'Holds more than 10 charts'},
+    {category: 'Chart-Holder', price: 120,img_add:"/imgs/ChartHolder/3.jpg",condition: 'No Damage',owner: 'Vamsi',
+    description: 'Nice Look'}
+
 ]
 
 app.get("/", (req, res, next) => {
