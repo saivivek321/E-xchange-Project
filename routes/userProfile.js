@@ -7,7 +7,7 @@ const router = express.Router();
 // /profile/ => GET
 router.get('/profile', profileController.getProfileData);
 // /profile/orders => GET
-router.get('/profile/orders', profileController.getProfileOrders);
+router.get('/orders', profileController.getProfileOrders);
 // /profile/sales => GET
 router.get('/sales', profileController.getProfileSales);
 
