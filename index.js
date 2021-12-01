@@ -114,7 +114,7 @@ app.get('/category/:categoryName', (req, res, next)=>{
     const categoryName = _.lowerCase(req.params.categoryName)
     const filteredItems = categoryItems.filter(item => categoryName === _.lowerCase(item.category))
     res.render('categoryItem', {
-        path: `/category/${categoryName}`, 
+        path: '/category/${categoryName}', 
         categoryItems: filteredItems
     })
 })

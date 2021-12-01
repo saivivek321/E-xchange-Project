@@ -148,7 +148,7 @@ body{
   }
   
   .cards_wrap .card_item {
-    width: 25%;
+    width: 20%;
     padding: 10px;
   }
   
@@ -251,6 +251,8 @@ body{
   padding: 12px;
   border-radius: 25px;
   cursor: pointer;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .btn .fas{
