@@ -58,7 +58,7 @@ body {
     margin-left: 100px;
 }
 
-.main-menu > li {
+.main-menu > a > li {
     box-sizing: border-box;
     height: var(--menu-item-size);
     width: calc(3.5 * var(--menu-item-size));  
@@ -72,24 +72,24 @@ body {
     font-size: 16px;
     user-select: none;
 }
-.main-menu > li a{
+.main-menu  a{
    color:rgb(255, 255, 255);
 }
 
-.main-menu > li:not(.with-submenu) {
+.main-menu  > a > li:not(.with-submenu) {
     clip-path: polygon(10% 0%, 0% 100%, 95% 100%, 100% 50%, 95% 0%);
     shape-outside: polygon(10% 0%, 0% 100%, 95% 100%, 100% 50%, 95% 0%);
 }
 
-.main-menu > li:nth-child(2) {
+.main-menu > a > li:nth-child(2) {
     transform: translateX(-5%);
 }
 
-.main-menu > li:nth-child(3) {
+.main-menu > a > li:nth-child(3) {
     transform: translateX(-10%)
 }
 
-.main-menu > li:nth-child(4) {
+.main-menu > a > li:nth-child(4) {
     transform: translateX(-15%)
 }
 
@@ -97,18 +97,18 @@ body {
     margin-right: 5px;
 }
 
-.main-menu > li:hover:not(.active) {
+.main-menu > a > li:hover:not(.active) {
     background: linear-gradient(to right, var(--green-color), var(--blue-color));
     color: var(--white-color);
 }
 
-.main-menu > li:active:not(.active),
-.main-menu > li:active:not(.with-submenu){
+.main-menu > a > li:active:not(.active),
+.main-menu > a > li:active:not(.with-submenu){
     background: var(--blue-color);
     color: var(--white-color);
 }
 
-.main-menu > li:hover i:not(li.active) {
+.main-menu > a > li:hover i:not(li.active) {
     color: #175c58;
 }
 
@@ -165,7 +165,7 @@ h1 {
     display: block;
 }
 
-.submenu > li {
+.submenu > a > li {
     background: #dedede;
     border-bottom: 1px solid var(--gray-color); 
     color: #777;
@@ -175,10 +175,10 @@ h1 {
     line-height: 0%;
 }
 
-.submenu > li:hover {
+.submenu > a > li:hover {
     background: var(--gray-color)
 }
 
-.submenu > li:active {
+.submenu > a > li:active {
     background: var(--white-color);
 }
