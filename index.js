@@ -35,7 +35,6 @@ const categoryItems = [
      {category: 'books', price: 700,condition: 'usable',img_add:"/imgs/books/4.jpg",owner: 'Vamsi',
      description: 'some pages missing'},
 
-
     {category: 'Stationary',price: 120,img_add:"/imgs/stationary/1.jpg",condition: 'Not so good',owner: 'Vamsi',
     description: 'Some leafs are torn'}, 
     {category: 'Stationary',price: 50,img_add:"/imgs/stationary/2.jpg",condition: 'Good',owner: 'Vijay',
@@ -94,24 +93,8 @@ app.post("/sell", (req, res, next)=>{
     categoryItems.push(req.body)
     res.redirect(`/category/${category}`)
 })
-app.get('/profile', userProfileRoute)
 
-
-// app.get('/profile', (req, res, next)=>{
-//     res.render('profile', { path: "/profile"})
-// })
-
-// app.get('/profile/profile', (req, res, next)=>{
-//     res.render('profile/profile', { path: "/profile/profile"})
-// })
-// app.get('/profile/sales', (req, res, next)=>{
-//     res.render('profile/sales', { path: "/profile/sales"})
-// })
-// app.get('/profile/orders', (req, res, next)=>{
-//     res.render('profile/orders', { path: "/profile/orders"})
-// })
-
-
+app.use('/profile', userProfileRoute)
 
 app.get('/category/:categoryName', (req, res, next)=>{
     const categoryName = _.lowerCase(req.params.categoryName)
