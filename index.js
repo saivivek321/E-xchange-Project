@@ -2,10 +2,8 @@ const express=require('express');
 const bodyParser = require('body-parser')
 const _ = require('lodash')
 
-const app = express();
-app.set('view engine', 'ejs');
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({extended: true}))
+const userProfileRoute = require('./routes/userProfile')
+// const aboutUsRoute = require('./routes/aboutUs')
 
 const categorys=[
     {"title":"Cycle","img_add":"imgs/1.jpg", "category":"Cycle","url":"/category/cycle"},
@@ -67,11 +65,20 @@ const categoryItems = [
     description: 'Holds more than 10 charts'},
     {category: 'Chart-Holder', price: 120,img_add:"/imgs/ChartHolder/3.jpg",condition: 'No Damage',owner: 'Vamsi',
     description: 'Nice Look'}
-
 ]
 
+const app = express();
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}))
+
+
 app.get("/", (req, res, next) => {
-    res.render("profile", {path: "/profile"});
+    res.render('aboutUs/aboutUs', {path: '/about'})
+})
+
+app.get("/about", (req, res, next) =>{
+    res.render('aboutUs/aboutUs', {path: '/about'})
 })
 
 app.get("/purchase", (req, res, next) =>{
@@ -83,30 +90,26 @@ app.get('/sell', (req, res, next)=>{
 })
 
 app.post("/sell", (req, res, next)=>{
-    const {category, owner, price, condition, branch_year, description} = req.body
-    // console.log(category, owner, price, condition, branch_year, description);
+    const {category, owner, price, condition, description} = req.body
     categoryItems.push(req.body)
-    console.log(categoryItems);
-    // console.log(req.body);
     res.redirect(`/category/${category}`)
-    // need to redirect to sold items page at last  -----> final goal
-    // right now the data is added to the var and redirected to purchase page  ---> current working method to continue other work
 })
+app.get('/profile', userProfileRoute)
 
-app.get('/profile', (req, res, next)=>{
-    res.render('profile', { path: "/profile"})
-})
 
-app.get('/profile_profile', (req, res, next)=>{
-    res.render('profile/profile', { path: "/profile/profile"})
-})
-app.get('/profile_sales', (req, res, next)=>{
-    res.render('profile/sales', { path: "/profile/sales"})
-})
-app.get('/profile_orders', (req, res, next)=>{
-    res.render('profile/orders', { path: "/profile/orders"})
-})
+// app.get('/profile', (req, res, next)=>{
+//     res.render('profile', { path: "/profile"})
+// })
 
+// app.get('/profile/profile', (req, res, next)=>{
+//     res.render('profile/profile', { path: "/profile/profile"})
+// })
+// app.get('/profile/sales', (req, res, next)=>{
+//     res.render('profile/sales', { path: "/profile/sales"})
+// })
+// app.get('/profile/orders', (req, res, next)=>{
+//     res.render('profile/orders', { path: "/profile/orders"})
+// })
 
 
 
@@ -114,18 +117,13 @@ app.get('/category/:categoryName', (req, res, next)=>{
     const categoryName = _.lowerCase(req.params.categoryName)
     const filteredItems = categoryItems.filter(item => categoryName === _.lowerCase(item.category))
     res.render('categoryItem', {
-        path: '/category/${categoryName}', 
+        path: `/category/${categoryName}`, 
         categoryItems: filteredItems
     })
 })
 
 app.get('/cart', (req, res, next) =>{
-    // console.log("This is your cart");
     res.render('cart', { path: "/cart"})
 })
 
-
-app.listen(3000,function(){
-    console.log("Server Started and listening on 3000");
-
-})
+app.listen(3000,() =>{ console.log("Server Started and listening on 3000") })

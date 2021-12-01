@@ -1,7 +1,7 @@
 
 <%- include("includes/head.ejs") %>
 <link rel="stylesheet" type="text/css" href="/css/cat_styles.css">
-
+<link rel="stylesheet" href="/css/navigation.css">
   </head>
   <body>
 
@@ -12,7 +12,6 @@
   <!-- src="/imgs/cycles/1.jpg" -->
   <div class="grid">
     <% categoryItems.forEach(item =>{ %>
-
         <div class="grid-item">
             <div class="card">
               <img class="card-img" src="<%= item.img_add%>" alt="Rome" />

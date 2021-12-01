@@ -1,0 +1,58 @@
+[
+  {
+      "category": "cycle", 
+      "price": 500, 
+      "condition": "usable",
+      "img_add":"/imgs/cycles/1.jpg",
+      "owner": "Vijay",
+      "description": "Working well but front break need to be tightned"
+  },
+  {
+      "category": "books", 
+      "price": 500,
+      "condition": "usable",
+      "img_add":"/imgs/2.jpg",
+      "owner": "Vivek",
+      "description": "some pages missing"
+  },
+  {
+      "category": "Drafter", 
+      "price": 50,
+      "img_add":"/imgs/3.jpg",
+      "condition": "not so good",
+      "owner": "Jaithra",
+      "description": "Working well but need to be tightned"
+  },
+  {
+      "category": "cycle", 
+      "price": 600, 
+      "condition": "usable",
+      "img_add":"/imgs/cycles/2.jpg",
+      "owner": "Vamsi",
+      "description": "Working well but front break need to be tightned"
+  },
+  {
+      "category": "Stationary",
+      "price": 5,
+      "img_add":"/imgs/6.jpg",
+      "condition": "Not so good",
+      "owner": "Vamsi",
+      "description": "Working well but front break need to be tightned"
+  },  
+  {
+      "category": "cycle", 
+      "price": 400, 
+      "condition": "super",
+      "img_add":"/imgs/cycles/3.jpg",
+      "owner": "Jaithra",
+      "description": "Working well but front break need to be tightned"
+  },
+  {
+      "category": "cycle", 
+      "price": 400, 
+      "condition": "super",
+      "img_add":"/imgs/cycles/3.jpg",
+      "owner": "Jaithra",
+      "description": "Working well but front break need to be tightned"
+  }
+]
