@@ -45,7 +45,8 @@
   color: #fff;
   padding: 12px;
   border-radius: 25px;
-  cursor: pointer;
+  width: 50%;
+  margin-left: 100px;
 }
 
 .btn .fas{
