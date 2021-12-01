@@ -1,3 +1,10 @@
+const express=require('express');
+const bodyParser = require('body-parser')
+const _ = require('lodash')
+
+const userProfileRoute = require('./routes/userProfile')
+// const aboutUsRoute = require('./routes/aboutUs')
+
 const categorys=[
     {"title":"Cycle","img_add":"imgs/1.jpg", "category":"Cycle","url":"/category/cycle"},
     {"title":"Books","img_add":"imgs/2.jpg", "category":"Books","url":"/category/books"},
@@ -60,18 +67,10 @@ const categoryItems = [
     description: 'Nice Look'}
 ]
 
-const express=require('express');
-const bodyParser = require('body-parser')
-const _ = require('lodash')
-
-const userProfileRoute = require('./routes/userProfile')
-const aboutUsRoute = require('./routes/aboutUs')
-
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}))
-
 
 
 app.get("/", (req, res, next) => {
