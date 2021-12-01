@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -12,7 +7,7 @@ html {
 
 body {
   background-image: linear-gradient(to right, #bf6ecf78 , #2476ae6e);
-
+  
   /* display: flex; */
   justify-content: center;
   align-items: center;
@@ -20,16 +15,16 @@ body {
 }
 
 .page-title{
-    font-family: 'Gorditas', cursive;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-top: 50px;
-    font-size: 6rem;
+  font-family: 'Gorditas', cursive;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: 50px;
+  font-size: 6rem;
 }
 .grid {
-    font-family: "Poppins", sans-serif;
- margin-top:100px;
- margin-left: 150px;
+  font-family: "Poppins", sans-serif;
+  margin-top:100px;
+  margin-left: 150px;
   display: grid;
   width: 114em;
   grid-gap: 6rem;
@@ -63,17 +58,17 @@ body {
 }
 
 .card-header {
-    font-family: 'Mate SC', serif  ;
+  font-family: 'Mate SC', serif  ;
   font-size: 3rem;
   font-weight: 500;
   color: #0d0d0d;
   margin-bottom: 1.5rem;
 }
 .carn-details{
-    font-family: 'Mate SC', serif  ;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #0d0d0d;
+  font-family: 'Mate SC', serif  ;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #0d0d0d;
 }
 
 .card-text {

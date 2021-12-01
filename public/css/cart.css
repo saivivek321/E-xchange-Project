@@ -1,0 +1,404 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,600');
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+a {
+  border: 0 none;
+  outline: 0;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+input,button {
+  border: 0 none;
+  outline: 0 none;
+}
+
+button {
+  background-color: #666;
+  color: #fff;
+}
+
+button:hover,
+button:focus {
+  background-color: #555;
+}
+
+img,
+.basket-module,
+.basket-labels,
+.basket-product {
+  width: 100%;
+}
+
+input,
+button,
+.basket,
+.basket-module,
+.basket-labels,
+.item,
+.price,
+.quantity,
+.subtotal,
+.basket-product,
+.product-image,
+.product-details {
+  float: left;
+}
+
+.price:before,
+.subtotal:before,
+.subtotal-value:before,
+.total-value:before,
+.promo-value:before {
+  content: '₹';
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  clear: both;
+  font-size: 0.75rem;
+  overflow: hidden;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.basket,
+aside {
+  padding: 0 1rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.basket {
+  font-family: 'Lexend Deca', sans-serif;
+  margin-left:75px;
+  width: 65%;
+  background-color: #e9e7e7;
+  border-radius: 10px;
+}
+
+.basket-module {
+  color: #111;
+}
+
+.basket-labels {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 1.625rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: #111;
+  display: inline-block;
+  padding: 0.625rem 0;
+}
+
+li.price:before,
+li.subtotal:before {
+  content: '';
+}
+
+.item {
+  width: 55%;
+}
+
+.price,
+.quantity,
+.subtotal {
+  width: 15%;
+  font-size: 1rem;
+}
+
+.subtotal {
+  text-align: right;
+}
+
+.remove {
+  bottom: 1.125rem;
+  float: right;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 45%;
+}
+
+.remove button {
+  background-color: transparent;
+  color: #777;
+  float: none;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.item-heading {
+  font-size: 1.4rem;
+  padding-left: 4.375rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.basket-product {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.product-image {
+   width: 35%;
+}
+
+.product-details {
+  width: 65%;
+}
+
+.product-frame {
+  border: 1px solid #aaa;
+}
+
+.product-details {
+  padding: 0 1.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.quantity-field {
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 0.625rem;
+  padding: 2px;
+  width: 3.75rem;
+}
+
+aside {
+  float: right;
+  right:-80px;
+  position: relative;
+  width: 30%;
+}
+
+.summary {
+  font-family: 'Lexend Deca', sans-serif;
+  border-radius: 40px 10px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  padding: 1rem;
+  position: fixed;
+  width: 300px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.summary-total-items {
+  color: #666;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.summary-subtotal,
+.summary-total {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  clear: both;
+  margin: 1rem 0;
+  overflow: hidden;
+  padding: 0.5rem 0;
+}
+
+.subtotal-title,
+.subtotal-value,
+.total-title,
+.total-value,
+.promo-title,
+.promo-value {
+  color: #111;
+  float: left;
+  width: 50%;
+}
+
+.summary-promo {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.promo-title {
+  float: left;
+  width: 70%;
+}
+
+.promo-value {
+  color: #8B0000;
+  float: left;
+  text-align: right;
+  width: 30%;
+}
+
+.summary-delivery {
+  padding-bottom: 3rem;
+}
+
+.subtotal-value,
+.total-value {
+  text-align: right;
+}
+
+.total-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.summary-checkout {
+  display: block;
+}
+
+.checkout-cta {
+  font-family: 'Lexend Deca', sans-serif;
+  display: block;
+  float: none;
+  font-size: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.625rem 0;
+  width: 100%;
+}
+
+.summary-delivery-selection {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  display: block;
+  font-size: 0.625rem;
+  height: 34px;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .basket,
+  .summary,
+  .item,
+  .remove {
+    width: 100%;
+  }
+  .basket{
+    margin-left: 5%;
+    width:90%;
+  }
+  .basket-labels {
+    display: none;
+  }
+  .basket-module {
+    margin-bottom: 1rem;
+  }
+  .item {
+    margin-bottom: 1rem;
+  }
+  .product-image {
+    width: 40%;
+  }
+  .product-details {
+    width: 60%;
+  }
+  .price,
+  .subtotal {
+    width: 33%;
+  }
+  .quantity {
+    text-align: center;
+    width: 34%;
+  }
+  .quantity-field {
+    float: none;
+  }
+  .remove {
+    bottom: 0;
+    text-align: left;
+    margin-top: 0.75rem;
+    position: relative;
+  }
+  .remove button {
+    padding: 0;
+  }
+  .summary {
+    margin-top: 1.25rem;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1516px) {
+  aside {
+    padding: 0 1rem 0 0;
+  }
+  .summary {
+    width: 100%;
+    margin-top: 1.25rem;
+    position: relative;
+    right:125%;
+  }
+}
+@media screen and (min-width: 699px) and (max-width: 1000px) {
+  .summary {
+    margin-top: 1.25rem;
+    position: relative;
+    right:195%;
+  }
+}
+@media screen and (max-width: 699px) {
+  .summary {
+    width: 80%;
+    position: relative;
+  }
+  aside{
+    right:0;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  main {
+    width: 100%;
+  }
+  .product-details {
+    padding: 0 1rem;
+  }
+
+}
+
+@media screen and (min-width:700px) and (max-width: 1516px) {
+  .basket {
+    margin-left:10%;
+    width: 80%;
+  }
+}

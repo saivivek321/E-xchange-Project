@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
+body {
+  background: linear-gradient(#243545,#243545 var(--line-offset),#dedede var(--line-offset));
+  height: 125vh;
+  color: #878787;
+  --menu-item-size: 50px;
+  --green-color: #329680;
+  --blue-color: #099c95;
+  --dark-green-color: #175b52;
+  --white-color: #FFF;
+  --gray-color: #EDEDED;
+  --container-width: 700px;
+  --container-height: 400px;
+  --line-offset: calc((100% - var(--container-height))/ 2 + var(--menu-item-size) + 0.6em);
+}
+.profile-top{
+  padding-top:20px;
+  text-align: center;
+}
+.profile-top img{
+  border-radius: 10%;
+  width:100px;
+}
+.profile-top h1{
+  font-size: 1.2em;
+  font-family: 'Lexend Deca', sans-serif;
+  color:rgb(255, 255, 255);
+}
+.container {
+  font-family: 'Lexend Deca', sans-serif;
+  width: var(--container-width);
+  height: var(--container-height);
+  margin-left: -350px;
+  margin-top: -105px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+  
+}
+
+article {
+  background: var(--gray-color);
+  padding: 1em;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 5px 5px 5px #CCC;
+  position: relative;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 115%;
+  margin: 1em 2em;
+  padding: 0;
+  position: relative;
+  color: #777;
+}
+
+.content {
+  padding: 0 0 0 3em;
+  font-size: 16px;
+}
