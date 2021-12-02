@@ -8,15 +8,26 @@
       
     <%- include("includes/navigation.ejs") %>
 
-    <form action="/sell" method="post">
+    <form action="/sell" method="post" autocomplete="off">
       <div class="contact-us">
         <div class="title">
           <h1 class="seller-heading">Sell Items</h1>
         </div>
         <div class="form">
           <div class="form-items">
-            <input type="text" class="input" placeholder="Category" required name="category">
+            <!-- <input type="text" class="input" placeholder="Category" required name="category">
+            <i class="fas fa-angle-double-right"></i> -->
             <i class="fas fa-angle-double-right"></i>
+            <select type="text" class="input dropdown" required name="category" data-selected="">
+              <option  selected disabled hidden>Select Category :</option>
+              <option >Cycle</option>
+              <option >Books</option>
+              <option >Calculator</option>
+              <option >Stationary</option>
+              <option >Drafter</option>
+              <option >Chart-Holder</option>
+            </select>
+            
           </div>
           <div class="form-items">
             <input type="text" class="input" placeholder="Owner Name" required name="owner">

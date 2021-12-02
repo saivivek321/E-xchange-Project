@@ -72,3 +72,12 @@
   margin-top: 10px;
   font-size: 2rem;
 }
+.dropdown{
+  color:#444447;
+  
+}
+.dropdown > option{
+  font-size: 0.8rem;
+  color:black;
+}
+
