@@ -4,6 +4,7 @@ const _ = require('lodash')
 
 const userProfileRoute = require('./routes/userProfile')
 const sellItemsRoute = require('./routes/sell')
+const purchaseItemsRoute = require('./routes/purchase')
 // const aboutUsRoute = require('./routes/aboutUs')
 
 const categorys=[
@@ -84,6 +85,9 @@ app.get("/about", (req, res, next) =>{
 app.get("/purchase", (req, res, next) =>{
     res.render("purchase",{Categories:categorys, path: "/purchase"});
 })
+
+// app.use('/purchase', purchaseItemsRoute)
+
 app.use('/sell', sellItemsRoute)
 
 // app.get('/sell', (req, res, next)=>{
