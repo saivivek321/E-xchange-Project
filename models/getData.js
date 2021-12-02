@@ -1,25 +1,25 @@
 const fs = require('fs')
 const path = require('path')
 
-const filePath = path.join(path.dirname(require.main.filename), "data", 'data.json')
+// const filePath = path.join(path.dirname(require.main.filename), "data", 'data.json')
 // const categories = path.join(path.dirname(require.main.filename), "data", 'categories.json')
-// const categoryItems = path.join(path.dirname(require.main.filename), "data", 'categoryItems.json')
+const categoryItems = path.join(path.dirname(require.main.filename), "data", 'categoryItems.json')
 
 const getDataFromFile = callBack =>{
-  fs.readFile(filePath, (err, content)=>{
+  fs.readFile(categoryItems, (err, content)=>{
     if(err) callBack([])
     else callBack(JSON.parse(content))
   })
 }
 
 module.exports = class Product{
-  constructor(title){
-    this.title = title
+  constructor(item){
+    this.item = item
   }
   save(){
     getDataFromFile(products =>{
       products.push(this)
-      fs.writeFile(filePath, JSON.stringify(products), (err)=>{
+      fs.writeFile(categoryItems, JSON.stringify(products), (err)=>{
         console.log(err);
       })
     })
