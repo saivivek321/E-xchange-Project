@@ -6,6 +6,7 @@ exports.getItemData = (req, res, next) =>{
 
 exports.postItemData = (req, res, next)=>{
   const item = req.body
+  console.log(item);
   const newItem = new allItems(item)
   // const {category, owner, price, condition, description} = req.body
   newItem.save()
