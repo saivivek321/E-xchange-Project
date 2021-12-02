@@ -8,7 +8,7 @@
       
     <%- include("includes/navigation.ejs") %>
 
-    <form action="/sell" method="post" autocomplete="off">
+    <form action="/sell" method="post" >
       <div class="contact-us">
         <div class="title">
           <h1 class="seller-heading">Sell Items</h1>
@@ -18,16 +18,16 @@
             <!-- <input type="text" class="input" placeholder="Category" required name="category">
             <i class="fas fa-angle-double-right"></i> -->
             <i class="fas fa-angle-double-right"></i>
-            <select type="text" class="input dropdown" required name="category" data-selected="">
-              <option  selected disabled hidden>Select Category :</option>
-              <option >Cycle</option>
-              <option >Books</option>
-              <option >Calculator</option>
-              <option >Stationary</option>
-              <option >Drafter</option>
-              <option >Chart-Holder</option>
+            <!-- <label for="categories">Select Category</label> -->
+            <select type="text" class="input dropdown" id="categories" required name="category" data-selected="">
+              <option disabled hidden>Select Category :</option>
+              <option>Cycle</option>
+              <option>Books</option>
+              <option>Calculator</option>
+              <option>Stationary</option>
+              <option>Drafter</option>
+              <option>Chart-Holder</option>
             </select>
-            
           </div>
           <div class="form-items">
             <input type="text" class="input" placeholder="Owner Name" required name="owner">
@@ -41,15 +41,10 @@
             <input type="text" class="input" placeholder="Item Condition" required name="condition">
             <i class="fas fa-wrench"></i>
           </div>
-          <!-- <div class="form-items">
-            <input type="text" class="input" placeholder="Branch and Year" required name="branch_year">
-            <i class="fas fa-graduation-cap"></i>
-          </div> -->
           <div class="form-items">
-            <input type="file" class="input" name="filename" accept="image/*" required>
+            <input type="file" class="input" name="img_path" accept="image/*" required>
             <i class="fas fa-image"></i>
           </div>
-      
           <div class="form-items">
             <textarea class="input message" cols="30" rows="10" placeholder="DISCRIPTION ABOUT ITEM...." required name="description"></textarea>
           </div>
